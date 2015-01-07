@@ -4,6 +4,6 @@ app.factory('townsData', ['$resource', 'baseServiceUrl', function($resource,base
 		return resource.query();
 	}
 	return {
-		getTowns: getTowns	
+		getTowns: getAllTowns	
 	}
 }])
