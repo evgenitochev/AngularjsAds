@@ -6,16 +6,26 @@ app.factory('userData', ['$resource', 'baseServiceUrl','authentication', functio
 			.save(user)
 			.$promise
 			.then(function (data) {
-				authentication.saveUser(angular.toJson(data));
+				authentication.saveUser(data);
 			});
 	}
 
 	function loginUser (user) {
-		// body...
+		return $resource(baseServiceUrl + 'user/login')
+			.save(user)
+			.$promise
+			.then(function (data) {
+				authentication.saveUser(data);
+			});
 	}
 
 	function logoutUser (user) {
-		// body...
+		return $resource(baseServiceUrl + 'user/logout')
+			.save(user)
+			.$promise
+			.then(function (data) {
+				authentication.removeUser();
+			});
 	}
 
 
