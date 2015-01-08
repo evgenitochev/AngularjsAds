@@ -1,4 +1,4 @@
-app.factory('adsData', [ '$resource','baseServiceUrl' function($resource, baseServiceUrl){
+app.factory('adsData', [ '$resource','baseServiceUrl' , function($resource, baseServiceUrl) {
 	var resource = $resource(baseServiceUrl + 'ads:ad:Id', {AdId: '@id'}, {
 		update: { method: 'PUT' }
 	})
@@ -25,7 +25,7 @@ app.factory('adsData', [ '$resource','baseServiceUrl' function($resource, baseSe
 	}
 
 	return {
-		getPublicAds: getPublicAds
+		getPublicAds: getPublicAds,
 		edit: editAd,
 		getAdById: getAdById,
 		add: addAd,
