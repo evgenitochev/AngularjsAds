@@ -6,7 +6,7 @@ app.factory('userData', ['$resource', 'baseServiceUrl','authentication', functio
 			.save(user)
 			.$promise
 			.then(function (data) {
-				authentication.saveUser(user);
+				authentication.saveUser(angular.toJson(data));
 			});
 	}
 
