@@ -2,7 +2,18 @@
 	<img src="images/page-loader.gif" ng-hide="ready" alt="" width="150px">
 	<ul ng-cloak>
 		<li ng-repeat="ad in adsData.ads">
-			{{ad.title}}
+			<ul>
+				<li>{{ad.title}}</li>
+				<li>{{ad.text}}</li>
+				<li>{{ad.townId}}</li>
+				<li>{{ad.categoryId}}</li>
+			</ul>
+			
 		</li>
+		
+
 	</ul>
 </div>
+
+
+
