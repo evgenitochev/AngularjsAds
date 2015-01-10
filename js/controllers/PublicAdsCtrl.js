@@ -5,5 +5,5 @@ app.controller('PublicAdsCtrl', [ '$scope', 'adsData', function($scope, adsData)
 		.then(function (data) {
 			$scope.adsData = data;
 			$scope.ready = true;
-		})
+		});
 }])
