@@ -1,7 +1,7 @@
 app.factory('filter', function(){
 	var filterParams = {};
 
-	function filterByCategory (category) {
+	function filterByCategory(category) {
 		filterParams.categoryId = category.id;
 	}
 
