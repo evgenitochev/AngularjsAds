@@ -1,3 +1,7 @@
+<div ng-if="authService.isLoggedIn()" class="user-area">
+  <span>{{authService.getCurrentUser().username}}</span>
+</div>
+
 <div class="navigation">
 	<ul>
 		<li>
@@ -12,7 +16,7 @@
 			<a href="#/">Edit Profile</a>
 		</li>
 		<li>
-			<a href="#/" ng-click="logout()">Logout</a>
+			<a ng-click="logout()" class="link">Logout</a>
 		</li>
 	</ul>
 </div>
