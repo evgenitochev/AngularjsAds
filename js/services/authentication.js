@@ -30,6 +30,11 @@ app.factory('authentication', function(){
 	function isLoggedIn () {
 		return !!getUserData();
 	}
+	
+	function logout () {
+		delete sessionStorage['currentUser'];
+		return logout;
+	}
 
 	return {
 		saveUser : saveUserData,
@@ -37,7 +42,8 @@ app.factory('authentication', function(){
 		getHeaders: getHeaders,
 		removeUser: removeUser,
 		isAdmin: isAdmin,
-		isLoggedIn: isLoggedIn
+		isLoggedIn: isLoggedIn,
+		logout: logout
 
 	}
 });
