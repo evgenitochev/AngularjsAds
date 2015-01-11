@@ -1,18 +1,24 @@
 <div id="public-ads">
 	<img src="images/page-loader.gif" ng-hide="ready" alt="" width="150px">
-	<ul ng-cloak>
+	<ul ng-cloak class="list"> 
 		<li ng-repeat="ad in adsData.ads">
-			<ul>
-				<li>{{ad.title}}</li>
-				<li>{{ad.text}}</li>
-				<li>{{ad.townId}}</li>
-				<li>{{ad.categoryId}}</li>
+			<ul class="public-ad">
+				<li class="ad-title">{{ad.title}}</li>
+				<li class="ad-text">{{ad.text}}</li>
+				<li class="ad-town">{{ad.townId}}</li>
+				<li class="ad-category">{{ad.categoryId}}</li>
+				<li class="ad-date">{{ad.date}}</li>
 			</ul>
 			
 		</li>
-		
-
 	</ul>
+	<pagination 
+		page="startPage" 
+		ng-model="currentPage" 
+		total-items="adsData.numItems" 
+		ng-change="pageChanged()" 
+		item-per-page="pageSize">
+	</pagination>
 </div>
 
 
