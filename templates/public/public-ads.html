@@ -4,10 +4,16 @@
 		<li ng-repeat="ad in adsData.ads">
 			<ul class="public-ad">
 				<li class="ad-title">{{ad.title}}</li>
+				<li>
+					<div ng-if='ad.imageDataUrl'>
+           			 <strong>Image:</strong><img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+       				 </div>
+       			</li>
 				<li class="ad-text">{{ad.text}}</li>
-				<li class="ad-town">{{ad.townId}}</li>
-				<li class="ad-category">{{ad.categoryId}}</li>
-				<li class="ad-date">{{ad.date}}</li>
+				<li class="ad-town">Name: {{ad.ownerName}}</li>
+				<li class="ad-category">Email: {{ad.ownerEmail}}</li>
+				<li class="ad-category">Phone: {{ad.ownerPhone}}</li>
+				<li class="ad-date">Date: {{ad.date | date:'dd-MMM-yyyy'}}</li>
 			</ul>
 			
 		</li>
@@ -20,6 +26,4 @@
 		item-per-page="pageSize">
 	</pagination>
 </div>
-
-
 

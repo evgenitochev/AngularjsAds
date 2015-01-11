@@ -100,3 +100,23 @@ ul.public-ad li.ad-category, li.ad-date {
 footer p {
 	text-align: center;
 }
+
+.image-box:before
+{
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.image-box img, .image-box p {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ad-image {
+    max-width: 150px;
+    max-height: 150px;
+}
